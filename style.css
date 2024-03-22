@@ -6,10 +6,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.5;
+    margin: auto;
+    justify-content: center;
 }
 
 .container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 .content-footer {
@@ -40,10 +43,25 @@ body{
 .build{
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
+.build h5{
+    color: rgb(0, 138, 0);
+}
+.build p{
+    color: gray;
+    margin-right: 15px;
+    text-align: left;
+    justify-content: left;
+}
+.build h1{
+    color:black;
+}
 .build h5, .build-row h1{
-    color: rgb(0, 138, o);
+    color: rgb(0, 138, 0);
+    display: flex;
+    justify-content: center;
 }
 .content-build{
     width: 100%;
@@ -57,4 +75,68 @@ body{
 }
 .build-row div{
     margin: 20px;
+}
+
+
+nav ul{
+    padding: 7px;
+}
+.freq-ask-question h1{
+    margin-bottom: 15px;
+    color: black;
+}
+
+.freq-ask-question {
+    font-size: 25px;
+    display: flex;
+    margin: auto;
+    width: 60%;
+    color: gray;
+}
+
+.accordion-item{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 30px 0;
+}
+.ac-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ac-item-answer{
+    display: none;
+}
+.accordion-item input[type="checkbox"]:checked ~ .ac-item-answer{
+    display: block;
+}
+.accordion-item input[type="checkbox"]{
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+.accordion-item input[type="checkbox"]:checked ~ .ac-item .icon:after{
+    content: "-";
+    font-size: 20px;
+}
+.accordion-item input[type="checkbox"] ~ .ac-item .icon:after{
+    content: "+";
+    font-size: 20px;
+}
+.icon{
+    color: green;
+    font-weight: bolder;
+    font-size: 20px;
+    border: 2px solid green;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px;
 }
